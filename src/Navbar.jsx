@@ -1,104 +1,56 @@
+import { Link } from "react-router-dom";
+
 export default function Navbar() {
   return (
-    <nav className="navbar navbar-expand-lg bg-body-tertiary">
-      <div className="container-fluid">
+    <nav>
+      <ul className="flex items-center gap-2 text-white">
 
-        <a className="navbar-brand" href="#">
-    RAECT EXAMPLES
-        </a>
+        <li>
+          <Link
+            to="/"
+            className="px-4 py-2 rounded-full font-semibold hover:bg-yellow-400 hover:text-gray-900 transition duration-300"
+          >
+            Home
+          </Link>
+        </li>
 
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
+        <li>
+          <Link
+            to="/about"
+            className="px-4 py-2 rounded-full font-semibold hover:bg-yellow-400 hover:text-gray-900 transition duration-300"
+          >
+            About
+          </Link>
+        </li>
 
-        <div
-          className="collapse navbar-collapse"
-          id="navbarSupportedContent"
-        >
-          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+        <li>
+          <Link
+            to="/contact"
+            className="px-4 py-2 rounded-full font-semibold hover:bg-yellow-400 hover:text-gray-900 transition duration-300"
+          >
+            Contact
+          </Link>
+        </li>
 
-            <li className="nav-item">
-              <a className="nav-link active" href="#">
-                Home
-              </a>
-            </li>
+        <li>
+          <Link
+            to="/sign-up"
+            className="px-4 py-2 rounded-full bg-yellow-400 text-gray-900 font-bold hover:bg-yellow-300 hover:scale-105 transition duration-300"
+          >
+            Sign-Up
+          </Link>
+        </li>
 
-            <li className="nav-item">
-              <a className="nav-link" href="#">
-           Interview Question
-              </a>
-            </li>
+        <li>
+          <Link
+            to="/sign-in"
+            className="px-4 py-2 rounded-full border border-yellow-300 font-semibold hover:bg-yellow-400 hover:text-gray-900 transition duration-300"
+          >
+            Sign-In
+          </Link>
+        </li>
 
-            <li className="nav-item dropdown">
-              <a
-                className="nav-link dropdown-toggle"
-                href="#"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-               Courses
-              </a>
-
-              <ul className="dropdown-menu">
-                <li>
-                  <a className="dropdown-item" href="#">
-                    Action
-                  </a>
-                </li>
-
-                <li>
-                  <a className="dropdown-item" href="#">
-                    Another action
-                  </a>
-                </li>
-
-                <li>
-                  <hr className="dropdown-divider" />
-                </li>
-
-                <li>
-                  <a className="dropdown-item" href="#">
-                    Something else here
-                  </a>
-                </li>
-              </ul>
-            </li>
-
-            <li className="nav-item">
-              <a className="nav-link disabled" aria-disabled="true">
-                Disabled
-              </a>
-            </li>
-
-          </ul>
-
-          <form className="d-flex" role="search">
-            <input
-              className="form-control me-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-
-            <button
-              className="btn btn-outline-success"
-              type="submit"
-            >
-              Search
-            </button>
-          </form>
-
-        </div>
-      </div>
+      </ul>
     </nav>
   );
 }
